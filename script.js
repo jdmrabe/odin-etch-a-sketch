@@ -1,6 +1,7 @@
 const grid = document.querySelector(".grid");
 const gridDimension = 540;
 let cellAmount = 16;
+let mouseDown = false;
 
 function createGrid(cells) {
   grid.style.height = gridDimension + "px";
@@ -33,3 +34,11 @@ const configureCell = document
     }
     createGrid(cellAmount);
   });
+
+function setButtonState(e) {
+  mouseDown = (e.buttons & 1) === 1;
+}
+
+document.addEventListener("mousedown", setButtonState);
+document.addEventListener("mousemove", setButtonState);
+document.addEventListener("mouseup", setButtonState);

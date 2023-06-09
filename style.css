@@ -27,9 +27,13 @@ button {
   box-sizing: content-box;
   display: flex;
   flex-wrap: wrap;
-  border: 5px #121212s solid;
+  border: 5px #121212 solid;
 
   background-color: #fff;
+}
+
+.cell:hover {
+  background-color: #121212;
 }
 
 .container {
