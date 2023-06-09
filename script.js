@@ -13,9 +13,16 @@ function createGrid(cells) {
     div.style.width = gridDimension / cells + "px";
     div.style.height = gridDimension / cells + "px";
 
-    div.addEventListener("mousedown", () => {
+    div.addEventListener("mouseenter", () => {
+      if (mouseDown) {
+        div.style.backgroundColor = "black";
+      }
+    });
+
+    div.addEventListener("click", () => {
       div.style.backgroundColor = "black";
     });
+
     grid.appendChild(div);
   }
 }

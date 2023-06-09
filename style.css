@@ -30,6 +30,7 @@ button {
   border: 5px #121212 solid;
 
   background-color: #fff;
+  cursor: crosshair;
 }
 
 .cell:hover {
