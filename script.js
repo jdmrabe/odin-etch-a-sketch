@@ -15,12 +15,12 @@ function createGrid(cells) {
 
     div.addEventListener("mouseenter", () => {
       if (mouseDown) {
-        div.style.backgroundColor = "black";
+        div.style.backgroundColor = "#121212";
       }
     });
 
     div.addEventListener("click", () => {
-      div.style.backgroundColor = "black";
+      div.style.backgroundColor = "#121212";
     });
 
     grid.appendChild(div);
@@ -32,10 +32,16 @@ createGrid(cellAmount);
 const configureCell = document
   .getElementById("cell-amount")
   .addEventListener("click", () => {
-    cellAmount = parseInt(
+    let newCellAmount = parseInt(
       prompt("Please input grid size: (1-100)", cellAmount)
     );
-    if (cellAmount < 0 || cellAmount > 100) return;
+    if (
+      newCellAmount < 0 ||
+      newCellAmount > 100 ||
+      newCellAmount === cellAmount
+    )
+      return;
+    cellAmount = newCellAmount;
     while (grid.firstChild) {
       grid.removeChild(grid.firstChild);
     }
