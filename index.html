@@ -15,23 +15,33 @@
   </head>
   <body>
     <div class="container">
-      <div class="slider-container">
-        <div>Canvas size:</div>
-        <input type="text" id="output" />
-        <input
-          type="range"
-          min="1"
-          max="100"
-          value="16"
-          class="slider"
-          id="grid-size"
+      <h1>
+        Etch-a-Sketch
+        <img
+          src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/270d.svg"
+          alt="an emoji of a hand holding pencil"
         />
-      </div>
-      <div class="btn-container">
-        <button id="rebuild-btn">Rebuild canvas</button>
-        <button id="clear">Clear</button>
+      </h1>
+      <div class="tool-container">
+        <div class="slider-container">
+          <div>Canvas size:</div>
+          <input type="text" id="output" />
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="16"
+            class="slider"
+            id="grid-size"
+          />
+        </div>
+        <div class="btn-container">
+          <button id="rebuild-btn">Rebuild canvas</button>
+          <button id="clear">Clear</button>
+        </div>
       </div>
       <div class="grid"></div>
     </div>
+    <footer></footer>
   </body>
 </html>

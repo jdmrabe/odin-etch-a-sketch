@@ -12,6 +12,18 @@
   font-family: "Open Sans", sans-serif, system-ui;
 }
 
+h1 {
+  font-family: inherit;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+}
+
+h1 > img {
+  width: 26px;
+  height: auto;
+}
+
 body {
   background-color: var(--bg);
   color: #fff;
@@ -28,6 +40,13 @@ button {
   margin: 0;
   padding: 0;
   cursor: pointer;
+}
+
+.tool-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .grid {
