@@ -1,12 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
+:root {
+  --bg: #122436;
+  --text: #eeffff;
+  --secondary: #243648;
+  --light-blue: #0089ab;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif, system-ui;
 }
 
 body {
-  background-color: #122436;
+  background-color: var(--bg);
   color: #fff;
   margin: 0;
   padding: 0;
@@ -15,8 +22,8 @@ body {
 }
 
 button {
-  background-color: #243648;
-  color: #eeffff;
+  background-color: var(--secondary);
+  color: var(--text);
   border: none;
   margin: 0;
   padding: 0;
@@ -27,7 +34,7 @@ button {
   box-sizing: content-box;
   display: flex;
   flex-wrap: wrap;
-  border: 5px #121212 solid;
+  border: 5px var(--light-blue) solid;
 
   background-color: #fff;
   cursor: crosshair;
@@ -47,13 +54,53 @@ button {
   padding: 50px;
 }
 
-#cell-amount {
+.slider-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slider {
+  appearance: none;
+  height: 16px;
+  background: #243648;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 200ms;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: var(--light-blue);
+  cursor: pointer;
+}
+
+#rebuild-btn {
   padding: 0.5rem 0.75rem;
   border-radius: 0.25rem;
   font-size: 1rem;
 }
 
-#cell-amount:hover {
+#rebuild-btn:hover {
   background-color: #ccdddd;
   color: #243648;
+}
+
+#output {
+  background-color: #122436;
+  border: 1px var(--light-blue) solid;
+  border-radius: 4px;
+  color: #eeffff;
+  width: 30px;
+  flex: none;
+}
+
+#grid-size {
+  flex: 1;
 }

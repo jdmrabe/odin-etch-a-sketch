@@ -14,12 +14,6 @@ function createGrid(cells) {
     div.style.height = gridDimension / cells + "px";
 
     div.addEventListener("mouseenter", () => {
-      if (mouseDown) {
-        div.style.backgroundColor = "#121212";
-      }
-    });
-
-    div.addEventListener("click", () => {
       div.style.backgroundColor = "#121212";
     });
 
@@ -30,11 +24,9 @@ function createGrid(cells) {
 createGrid(cellAmount);
 
 const configureCell = document
-  .getElementById("cell-amount")
+  .getElementById("rebuild-btn")
   .addEventListener("click", () => {
-    let newCellAmount = parseInt(
-      prompt("Please input grid size: (1-100)", cellAmount)
-    );
+    let newCellAmount = slider.value;
     if (
       newCellAmount < 0 ||
       newCellAmount > 100 ||
@@ -48,10 +40,16 @@ const configureCell = document
     createGrid(cellAmount);
   });
 
-function setButtonState(e) {
-  mouseDown = (e.buttons & 1) === 1;
-}
+const slider = document.getElementById("grid-size");
+const output = document.getElementById("output");
+output.value = slider.value;
 
-document.addEventListener("mousedown", setButtonState);
-document.addEventListener("mousemove", setButtonState);
-document.addEventListener("mouseup", setButtonState);
+slider.oninput = function () {
+  output.value = this.value;
+};
+
+output.addEventListener("keyup", (event) => {
+  if (event.key === "Enter") {
+    slider.value = output.value;
+  }
+});

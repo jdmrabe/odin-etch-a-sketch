@@ -8,9 +8,20 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-  <body ondragstart="return false;" ondrop="return false;">
+  <body>
     <div class="container">
-      <button id="cell-amount">Configure grid size</button>
+      <div class="slider-container">
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="16"
+          class="slider"
+          id="grid-size"
+        />
+        <input type="text" id="output" />
+      </div>
+      <button id="rebuild-btn">Rebuild grid</button>
       <div class="grid"></div>
     </div>
   </body>
