@@ -81,13 +81,18 @@ button {
   cursor: pointer;
 }
 
-#rebuild-btn {
+.btn-container {
+  display: flex;
+  gap: 10px;
+}
+
+button {
   padding: 0.5rem 0.75rem;
   border-radius: 0.25rem;
   font-size: 1rem;
 }
 
-#rebuild-btn:hover {
+button:hover {
   background-color: #ccdddd;
   color: #243648;
 }

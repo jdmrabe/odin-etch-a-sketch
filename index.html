@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/270f.svg"
+    />
     <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
       <div class="slider-container">
+        <div>Canvas size:</div>
+        <input type="text" id="output" />
         <input
           type="range"
           min="1"
@@ -19,9 +26,11 @@
           class="slider"
           id="grid-size"
         />
-        <input type="text" id="output" />
       </div>
-      <button id="rebuild-btn">Rebuild grid</button>
+      <div class="btn-container">
+        <button id="rebuild-btn">Rebuild canvas</button>
+        <button id="clear">Clear</button>
+      </div>
       <div class="grid"></div>
     </div>
   </body>

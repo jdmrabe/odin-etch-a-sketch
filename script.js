@@ -53,3 +53,10 @@ output.addEventListener("keyup", (event) => {
     slider.value = output.value;
   }
 });
+
+const clear = document.getElementById("clear").addEventListener("click", () => {
+  const cells = document.querySelectorAll(".cell");
+  cells.forEach((cell) => {
+    cell.style.backgroundColor = "#fff";
+  });
+});
