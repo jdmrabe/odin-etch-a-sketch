@@ -29,7 +29,9 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100svh;
 }
 
@@ -46,7 +48,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 10px;
 }
 
 .grid {
@@ -127,4 +129,25 @@ button:hover {
 
 #grid-size {
   flex: 1;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+
+  color: var(--text);
+  font-family: inherit;
+}
+
+footer > a {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 300ms;
+}
+
+footer > a:hover {
+  transform: translateY(-0.25rem) scale(1.2);
 }
